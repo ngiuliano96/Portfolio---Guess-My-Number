@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+:root {
+  --clr-dark: #222;
+  --clr-neutral-900: #ccc;
+  --clr-light: #eee;
+  --clr-special: #60b347;
+
+  --ff-primary: 'Press Start 2P', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
+  /* background-color: var(--clr-special) !important; */
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin: 1.5rem 0 6rem;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+header,
+section {
+  padding: 1.75rem 0 1.75rem;
+}
+
+header {
+  border-bottom: 7px solid var(--clr-light);
+  margin-bottom: 3rem;
+}
+
+header:first-child {
+  position: relative;
+}
+
+.container {
+  margin-inline: auto;
+  width: min(90%, 120rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.flex div:first-child {
+  align-items: center;
+}
+
+.btn {
+  width: 100%;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  border: none;
+  padding: 0.5rem 0;
+
+  font-size: 1.3rem;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--clr-neutral-900);
+}
+
+.number {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  font-size: 3.5rem;
+  width: 10rem;
+  padding: 1.5rem 0;
+  text-align: center;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.guess {
+  width: 17rem;
+  background: none;
+  border: 4px solid var(--clr-light);
+  font-family: inherit;
+  color: inherit;
+  font-size: 3rem;
+  padding: 1.5rem;
+  text-align: center;
+  display: block;
+  margin: 3rem 0 2rem;
+}
+
+.label {
+  margin-top: 0.5rem;
+}
+
+/* Large Screens */
+@media (min-width: 45rem) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+  }
+
+  p {
+    margin: 1.5rem 0;
+  }
+
+  header,
+  section {
+    padding: 2rem 0 3rem;
+  }
+
+  header {
+    margin-bottom: 7rem;
+  }
+
+  .flex {
+    flex-direction: row;
+    gap: 0 25%;
+  }
+
+  .flex div:nth-child(2) {
+    text-align: left;
+  }
+
+  .btn {
+    width: auto;
+    padding: 1.2rem 2.2rem;
+  }
+
+  .guess {
+    width: 15rem;
+    padding: 1.5rem;
+  }
+
+  .label {
+    margin: 1.5rem 0 0;
+  }
+}
+
+@media (min-width: 60rem) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .btn {
+    width: auto;
+    padding: 1.5rem 2.5rem;
+  }
+}
